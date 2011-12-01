@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+    
+  <form-beans>
+    	<form-bean name="studyGainForm" type="form.StudyGainForm" />
+    	
+     	
+   </form-beans>
+  
+  <global-forwards>
+	<forward name="index"
+             path="/index.jsp"/>
+    <forward name="error"
+             path="/error.jsp"/>
+      <!--
+    <forward name="receipt"
+             path="/receipt.jsp"/>
+	<forward name="closeModule"
+             path="/closeModule.jsp"/>
+       -->
+  </global-forwards>
+  
+  <action-mappings>    
+
+		
+		<action path="/studygain"
+					name="studyGainForm"
+					scope="request"
+					type="action.StudyGainAction"
+					parameter="action">
+			<forward name="create" path="/content/studygain/studygain_list_all.jsp"/>
+			<forward name="modify" path="/content/studygain/studygain_list_all.jsp"/>
+			<forward name="list_all" path="/content/studygain/studygain_list_all.jsp"/>
+			<forward name="view" path="/content/studygain/studygain_view.jsp"/>
+            <forward name="delete" path="/content/studygain/studygain_list_all.jsp"/>
+            <forward name="valueList" path="/content/studygain/listAll_valueList.jsp"/>
+		</action>
+
+
+
+  </action-mappings>
+    <!--
+    <message-resources 
+	parameter="application" 
+	null="false"/>
+	-->
+</struts-config>
