@@ -1,2 +1,2 @@
-这里做一些修改
-make some change
+This is a sample web project , which doesn't use maven or gradle to manage jars.
+So if you want to use other modules , please add them manually.
